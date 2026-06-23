@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SportCool | Premium Football Jerseys</title>
+  <!-- Google Fonts: Inter para un look premium y moderno -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- Archivo CSS Externo -->
+  <link rel="stylesheet" href="assent/css/tienda.css">
+</head>
+<body>
+
+  <!-- HEADER / APARTADO DE NAVEGACIÓN -->
+  <header class="main-header">
+    <div class="header-container">
+      <a href="#" class="logo">SPORT<span>COOL</span></a>
+      
+      <nav class="navigation">
+        <a href="#hero" class="nav-link">Inicio</a>
+        <a href="#catalog" class="nav-link">Colección</a>
+        <a href="#contacto" class="nav-link">Contacto</a>
+      </nav>
+
+      <div class="actions">
+        <button class="cart-toggle-btn" id="cartToggleBtn" aria-label="Abrir carrito">
+          <i class="fa-solid fa-bag-shopping"></i>
+          <span class="cart-counter" id="cartCounter">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section" id="hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <span class="hero-tag">EDICIÓN LIMITADA 2026</span>
+      <h1 class="hero-title">Lleva la Pasión <br>en la Piel</h1>
+      <p class="hero-subtitle">Camisetas de fútbol de calidad premium con detalles oficiales. Envíos garantizados a toda Bolivia.</p>
+      <button class="btn-primary" onclick="scrollToCatalog()">
+        VER CATÁLOGO <i class="fa-solid fa-arrow-right"></i>
+      </button>
+    </div>
+  </section>
+
+  <!-- SECCIÓN DE PRODUCTOS (CATÁLOGO) -->
+  <main class="catalog-section" id="catalog">
+    <div class="section-header">
+      <h2 class="section-title">Productos Destacados</h2>
+      <p class="section-subtitle">Las equipaciones más icónicas del planeta fútbol</p>
+    </div>
+    
+    <div class="products-grid" id="productsGrid">
+      <!-- Los productos se inyectan dinámicamente mediante JavaScript -->
+    </div>
+  </main>
+
+  <!-- FOOTER INFORMATIVO -->
+  <footer class="main-footer" id="contacto">
+    <p>&copy; 2026 SPORTCOOL Oficial. Todos los derechos reservados.</p>
+    <p>Calidad de élite para los verdaderos fanáticos.</p>
+  </footer>
+
+  <!-- COMPONENTES DEL CARRITO (SIDEBAR Y OVERLAY) -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-sidebar-header">
+      <h3 class="cart-sidebar-title">Tu Carrito</h3>
+      <button class="cart-close-btn" id="cartCloseBtn" aria-label="Cerrar carrito">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+    </div>
+
+    <div class="cart-body" id="cartBody">
+      <!-- Los items agregados se inyectan aquí -->
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span class="total-label">Total:</span>
+        <span class="total-amount"><span id="cartTotal">0</span> Bs</span>
+      </div>
+      <button class="btn-checkout" onclick="proceedToCheckout()">
+        PROCEDER AL PAGO
+      </button>
+      <button class="btn-clear-all" onclick="clearCart()">
+        Vaciar Carrito
+      </button>
+    </div>
+  </aside>
+
+  <!-- Archivo JavaScript Externo -->
+  <script src="script.js"></script>
+</body>
+</html>
